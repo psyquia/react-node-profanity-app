@@ -65,6 +65,9 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+# Powershell env script
+*.ps1
+
 # Yarn Integrity file
 .yarn-integrity
 
