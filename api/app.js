@@ -1,3 +1,8 @@
+const tscr = require('./twitterScraper/app');
+const fsv = require('fs');
+
+const logPath = "./twitterScraper/txts/temp-possible_fp.txt";
+
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
@@ -14,6 +19,7 @@ var app = express();
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
+app.set('json spaces', 40);
 
 app.use(cors());
 app.use(logger("dev"));
@@ -25,9 +31,22 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 // app.use("/testAPI", testAPIRouter);
-app.post("/testAPI", function (req, res, next) {
-  const { one, two } = req.body;
-  res.send(one + two);
+app.post("/testAPI", async function (req, res) {
+  const { handle } = req.body;
+  const tweets = await tscr.getAllTweets(handle);
+  const report = await tscr.getProfanityReport(tweets);
+
+  res.json(report);
+});
+
+let stream;
+
+app.post("/report", async function (req, res) {
+  const { falsePos } = req.body;
+  if (!stream) stream = fsv.createWriteStream(logPath, { flags: 'a' });
+  stream.write(falsePos + '\r\n');
+
+  res.send("report successfully sent!");
 });
 
 // catch 404 and forward to error handler
