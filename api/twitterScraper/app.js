@@ -100,12 +100,10 @@ const processTweet = (tweet, reference, res) => {
 }
 
 const processWord = (tweet, word, { badWords, falsePositives }, { wordCount, wordInstances }) => {
-  if (word[0] === '@' || word.includes('co/')) return false;      // ignore "https://t.co/xxxxxx" links 
-
-  const wordL = word.toLowerCase();
+  if (word[0] === '@' || word.includes('co/') || falsePositives.has(word.toLowerCase())) return false;      // ignore "https://t.co/xxxxxx" links 
 
   for (const badWord of badWords) {
-    if (wordL.includes(badWord) && !falsePositives.has(wordL)) {
+    if (word.toLowerCase().includes(badWord)) {
       // Previous instance of badWord found
       if (wordCount[word]) {
         wordCount[word]++;
