@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 // app.use("/testAPI", testAPIRouter);
-app.post("/testAPI", async function (req, res) {
+app.post("/handle", async function (req, res) {
   const { handle } = req.body;
   const tweets = await tscr.getAllTweets(handle);
   const report = await tscr.getProfanityReport(tweets);
