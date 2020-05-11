@@ -7,4 +7,4 @@
   <dd>https://youtu.be/u9SPchHMPFM<dd>
 </dl>
 
-[![Twitter Profanity Search Demo](https://img.youtube.com/vi/u9SPchHMPFM/0.jpg)](https://www.youtube.com/watch?v=u9SPchHMPFM)
+[![Twitter Profanity Search Demo](https://i.imgur.com/FH5gEGT.png)](https://www.youtube.com/watch?v=u9SPchHMPFM)
