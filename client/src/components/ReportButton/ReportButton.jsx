@@ -6,14 +6,11 @@ import useStyles from './ReportButton.style';
 
 const ReportButton = ({ word, onReport }) => {
     const classes = useStyles();
-    const [state, setState] = useState(true);
-
-    const text = (state) ? "Not an offensive word?" : "Your report has been sent.";
 
     return (
         <React.Fragment>
             <Button className={classes.myButton} size="small" color="secondary" onClick={() => onReport(false)}>
-                <Typography className={classes.buttonText}>{text}</Typography>
+                <Typography className={classes.buttonText}>Not a risky word?</Typography>
             </Button>
         </React.Fragment>
     );

@@ -12,7 +12,7 @@ const Results = ({ data, loading, handle, onReport }) => {
         ));
 
     return (
-        <Paper className={classes.root}>
+        <Paper className={classes.root}><Typography className={classes.beta} variant="subtitle1" color="textSecondary"> BETA</Typography>
             {loading && (
                 <CircularProgress className={classes.loading} />
             )}

@@ -37,4 +37,13 @@ export default makeStyles((theme) => ({
         display: "flex",
         alignItems: "stretch",
     },
+
+    beta: {
+        margin: "0 0 0 0",
+        fontSize: '90%',
+        position: "absolute",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '70%',
+        },
+    }
 }));

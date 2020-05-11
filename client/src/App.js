@@ -19,7 +19,7 @@ class App extends Component {
 
     this.setState({ apiLoading: true });
 
-    fetch("http://10.0.0.209:8080/testAPI", {
+    fetch("http://10.0.0.209:8080/handle", {
       method: "POST",
       headers: {
         "Accept": "application/json",
@@ -58,7 +58,6 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.sendReportToAPI("CARL");
   }
 
   handleEnter = (handle) => (e) => {

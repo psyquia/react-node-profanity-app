@@ -10,7 +10,7 @@ const Bar = () => {
             <AppBar position="static" className={classes.appbar}>
                 <Toolbar>
                     <Typography variant="h4" className={classes.title}>
-                        Twitter Dirt Dig Up
+                        Twitter Profanity Search
                     </Typography>
                 </Toolbar>
             </AppBar>

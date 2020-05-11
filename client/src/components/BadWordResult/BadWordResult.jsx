@@ -7,7 +7,8 @@ const BadWordResult = ({ onReport, data, handle }) => {
     const [state, setState] = useState(true);
 
     useEffect(() => {
-        onReport(data[0]);
+        if (state === false)
+            onReport(data[0]);
     }, [state])
 
     const classes = useStyles();
