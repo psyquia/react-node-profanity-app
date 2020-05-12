@@ -10,7 +10,7 @@
 [![Twitter Profanity Search Demo](https://i.imgur.com/FH5gEGT.png)](https://www.youtube.com/watch?v=u9SPchHMPFM)
 
 <dl>
-  <dt>How to run locally (**requires Twitter API keys**)</dt>
+  <dt>How to run locally (*REQUIRES Twitter API keys*)</dt>
 </dl>
 
 * Open app.js in /api/twitterScraper and enter your API keys on line 8-11
