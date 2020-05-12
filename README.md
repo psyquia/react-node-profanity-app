@@ -13,7 +13,7 @@
   <dt>How to run locally (**requires Twitter API keys**)</dt>
 </dl>
 
-..* Open app.js in /api/twitterScraper and enter your API keys on line 8-11
-..* From /api run **npm start**
-..* From /client run **npm start**
-..* Access on *http://localhost:3000/*
+* Open app.js in /api/twitterScraper and enter your API keys on line 8-11
+* From /api run **npm start**
+* From /client run **npm start**
+* Access on *http://localhost:3000/*
